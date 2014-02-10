@@ -7,6 +7,7 @@
 //
 
 #import "RITAppDelegate.h"
+#import "RITPatient.h"
 
 @implementation RITAppDelegate
 
@@ -16,6 +17,49 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    RITPatient* patient1    = [[RITPatient alloc] init];
+    patient1.name           = @"Vova";
+    patient1.temperature    = 36.5f;
+    
+    RITPatient* patient2    = [[RITPatient alloc] init];
+    patient2.name           = @"Petya";
+    patient2.temperature    = 40.2f;
+    
+    RITPatient* patient3    = [[RITPatient alloc] init];
+    patient3.name           = @"Dima";
+    patient3.temperature    = 37.1f;
+    
+    RITPatient* patient4    = [[RITPatient alloc] init];
+    patient4.name           = @"Sasha";
+    patient4.temperature    = 38.f;
+    
+    NSArray*    patients    = @[patient1, patient2, patient3, patient4];
+    
+    void (^doctorBlock)(RITPatient*) = ^(RITPatient* patient) {
+        
+        NSLog(@"Patient %@ feels bad", patient.name);
+        
+        if (patient.temperature >=  37.f && patient.temperature <= 39.f) {
+            [patient takePill];
+        } else if (patient.temperature > 39.f) {
+            [patient makeShot];
+        } else {
+            NSLog(@"Patient %@ should rest", patient.name);
+        }
+        NSLog(@"\n");
+    };
+    
+    
+    for (RITPatient* patient in patients) {
+        [patient iFeelsBad:doctorBlock];
+    }
+    
+    
+    
+    
+    //[patients makeObjectsPerformSelector:@selector(iFeelsBad: doctorBlock)];
+    
     return YES;
 }
 

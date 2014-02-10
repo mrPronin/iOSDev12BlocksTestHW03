@@ -19,6 +19,7 @@
 		3E587CFB18A93AC700F77813 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E587CE318A93AC700F77813 /* UIKit.framework */; };
 		3E587D0318A93AC700F77813 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E587D0118A93AC700F77813 /* InfoPlist.strings */; };
 		3E587D0518A93AC700F77813 /* _2BlocksTestHW03Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E587D0418A93AC700F77813 /* _2BlocksTestHW03Tests.m */; };
+		3E587D1318A93AF900F77813 /* RITPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E587D1118A93AF900F77813 /* RITPatient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		3E587CE518A93AC700F77813 /* 12BlocksTestHW03 */ = {
 			isa = PBXGroup;
 			children = (
+				3E587D1018A93AF900F77813 /* RITPatient.h */,
+				3E587D1118A93AF900F77813 /* RITPatient.m */,
 				3E587CEE18A93AC700F77813 /* RITAppDelegate.h */,
 				3E587CEF18A93AC700F77813 /* RITAppDelegate.m */,
 				3E587CF118A93AC700F77813 /* Images.xcassets */,
@@ -242,6 +245,7 @@
 			files = (
 				3E587CF018A93AC700F77813 /* RITAppDelegate.m in Sources */,
 				3E587CEC18A93AC700F77813 /* main.m in Sources */,
+				3E587D1318A93AF900F77813 /* RITPatient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
